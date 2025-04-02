@@ -1,0 +1,369 @@
+$background-color: #1E2A38;
+$active-color:#e8b44a;
+$hover-color:rgb(42, 62, 85);
+$border:round #5E81AC;
+$scrollbar-color:#EBCB8B;
+$scrollbar-background:#10161e;
+$scrollbar-background-hover: #10161e;
+$scrollbar-background-active: #10161e;
+$scrollbar-color-hover: #f0debe;
+$scrollbar-color-active: #e8b44a;
+
+# Grid {
+#     grid-size: 2 1;
+#     grid-columns: 30% 70%;
+# }
+
+#right_panel {
+    height: 100%;
+    width: 100%;
+    layout: vertical;
+}
+
+#left_panel {
+    height: 100%;
+    width: 100%;
+    layout: vertical;
+}
+
+#output_display {
+    position: absolute;
+    dock: bottom;
+    height: 1;
+    width: 100%;
+    background: $background-color;
+    margin: 0 1;
+    padding: 0 1;
+    text-align: right;
+    content-align: right middle;
+    overflow: hidden; /* Prevent wrapping issues */
+}
+
+#output_label {
+    width: 100%;
+    text-align: right; /* Aligns text to the right */
+}
+
+
+#info_display_panel {
+    # height: 100%;
+    # width: 100%;
+    background: $background-color;
+    border: $border;
+    # box-sizing: content-box;
+    border-title-color: #EBCB8B;
+    scrollbar-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+    # scrollbar-size-vertical: 2;
+}
+
+#info_display {
+    # box-sizing: border-box;
+    # height: 100%;
+    # box-sizing: content-box;
+    width: auto;
+}
+
+# #info_display:focus {
+#     background: black;
+#     border: round #A4D3E5;
+#     background-tint: white 00%
+# }
+
+/* This is for the modal window itself */
+EditCellScreen {
+    align: center middle;
+}
+
+#edit_cell_input {
+    width: auto;  /* Adjust width as needed */
+    height: 3;  /* Give it more height for a larger, fancier look */
+    border: tall #5E81AC;
+    background:#1E2A38;  /* Light grey background */
+    color:#ffffff
+}
+
+
+#help_markdown {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    min-width: 0;
+    # border: $border;
+    # box-sizing: content-box;
+    color: $background-color;
+    scrollbar-gutter: stable;
+    background: $background-color;
+    scrollbar-color: $scrollbar-color;
+    scrollbar-background: $scrollbar-background;
+    scrollbar-background-hover: $scrollbar-background;
+    scrollbar-background-active: $scrollbar-background;
+    scrollbar-color-hover: $scrollbar-color-hover;
+    scrollbar-color-active: $scrollbar-color-active;
+    # background: $surface;
+    & > MarkdownTableOfContents {
+        display: none;
+        dock:right;
+        background: white;
+        color: white;
+    }
+}
+
+#help_markdown > * {
+    background-tint: transparent 00%;
+}
+
+#help_markdown2 > * {
+    background-tint: transparent 00%;
+    # background: $background-color;
+}
+
+
+
+#tree_display {
+    # padding: 1 1;
+    # box-sizing: content-box;
+    border: $border;
+    background: $background-color;
+    border-title-color: #EBCB8B;
+    scrollbar-color: $scrollbar-color;
+    scrollbar-background: $scrollbar-background;
+    scrollbar-background-hover: $scrollbar-background;
+    scrollbar-background-active: $scrollbar-background;
+    scrollbar-color-hover: $scrollbar-color-hover;
+    scrollbar-color-active: $scrollbar-color-active;
+    scrollbar-size-horizontal: 1;
+}
+
+#tree_display:focus {
+    background: $background-color;
+    border: round #A4D3E5;
+    background-tint: white 00%
+}
+
+#right_sub_panel {
+    border: $border;
+    background: $background-color;
+    height: 6;
+    border-title-color: #EBCB8B;
+}
+
+#right_sub_panel:focus {
+    border: round #A4D3E5;
+    background: $background-color;
+    height: 6;
+}
+#right_sub_panel.input-focused {
+    border: round #A4D3E5; /* Change this to whatever color you want */
+    background: $background-color;
+}
+
+.file_buttons {
+    margin: 0 1;
+    height: 1;
+    min-width: 2;
+    width: auto;
+    padding: 0 1;
+    border: none;
+    background: rgb(23, 33, 44);
+    color:rgb(188, 207, 249);
+}
+
+.file_buttons:hover {
+    background: rgb(40, 54, 72);
+    color: #f0debe;
+}
+
+.folder_buttons {
+    margin: 0 1;
+    height: 1;
+    min-width: 2;
+    width: auto;
+    padding: 0 1;
+    border: none;
+    background: rgb(23, 33, 44);
+    color:rgb(240, 223, 37);
+}
+
+.folder_buttons:hover {
+    background: rgb(40, 54, 72);
+    color: #f0debe;
+}
+
+#buttons_files_row {
+    height: 1;
+    width: auto;
+    background: $background-color;
+    scrollbar-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+
+#buttons_folders_row {
+    height: 1;
+    width: auto;
+    background: $background-color;
+    scrollbar-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+
+#tab_and_table {
+    height: 1fr;
+    width: auto;
+    background: $background-color;
+    border: $border;
+    scrollbar-color: #EBCB8B;
+    border-title-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+
+#tab_panel {
+    height: 1fr;
+    background: $background-color;
+    color: $background-color;
+    # border: blank #5E81AC;
+    scrollbar-color: #EBCB8B;
+    border-title-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+
+TabbedContent #--content-tab-tab_files {
+    color:rgb(188, 207, 249);
+}
+
+TabbedContent #--content-tab-tab_folders {
+    color:rgb(240, 223, 37) ;
+}
+
+#file_table {
+    height: 1fr;
+    background:$background-color;
+    # border: $border;
+    scrollbar-color: #EBCB8B;
+    border-title-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+#file_table:focus {
+    background: $background-color;
+    # border: round #A4D3E5;
+    scrollbar-background:#10161e;
+    
+    background-tint: white 00%
+}
+
+
+
+#folder_table {
+    height: 1fr;
+    background: $background-color;
+    # border: $border;
+    scrollbar-color: #EBCB8B;
+    border-title-color: #EBCB8B;
+    scrollbar-background:#10161e;
+    scrollbar-background-hover: #10161e;
+    scrollbar-background-active: #10161e;
+    scrollbar-color-hover: #f0debe;
+    scrollbar-color-active: #e8b44a;
+    scrollbar-size-horizontal: 1;
+}
+#folder_table:focus {
+    background: $background-color;
+    # border: round #A4D3E5;
+    scrollbar-background:#10161e;
+    
+    background-tint: white 00%
+}
+
+# .2-column {
+#     color: green;
+#     bold: true;
+# }
+
+#input_command {
+    height: 3;
+    margin: 0 0;
+}
+#input_command:focus {
+    border:tall  #A4D3E5;
+}
+
+#dialog {
+    height: 100%;
+    margin: 4 8;
+    background: $panel;
+    color: $text;
+    border: tall $background;
+    padding: 1 2;
+}
+
+/* The button class */
+Button {
+    width: 1fr;
+}
+
+/* Matches the question text */
+.question {
+    text-style: bold;
+    height: 100%;
+    content-align: center middle;
+}
+
+/* Matches the button container */
+.buttons {
+    width: 100%;
+    height: auto;
+    dock: bottom;
+}
+
+.separator-horizontal {
+    width: 2;
+    background: $background-color;
+    # border: dashed rgb(44, 78, 109);
+    &:hover {
+        background: $hover-color;
+    }
+    &.separator-active {
+        background: $active-color;
+    }
+
+}
+
+.separator-vertical {
+    height: 1;
+    background: $background-color;
+    &:hover {
+        background: $hover-color;
+    }
+    &.separator-active {
+        background: $active-color;
+    }
+}

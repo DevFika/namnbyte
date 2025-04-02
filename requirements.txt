@@ -1,0 +1,4 @@
+imageio==2.37.0
+OpenEXR==3.3.3
+Pillow==11.1.0
+textual==3.0.0
